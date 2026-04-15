@@ -19,11 +19,11 @@ const Footer = () => {
           <FaXTwitter className='w-6 h-6'/>
         </div>
       </div>
-       <div className='flex justify-between items-center max-w-7xl mx-auto py-6 text-gray-400 border-t border-gray-500' >
+       <div className=' lg:flex justify-between items-center max-w-7xl mx-auto py-6 text-gray-400 border-t border-gray-500' >
         <div>
           <p>© 2024 KeenKeeper. All rights reserved.</p>
         </div>
-        <div className='flex gap-10'>
+        <div className='lg:flex gap-10'>
           <p>Privacy Policy</p>
           <p>Terms of Service</p>
           <p>Cookies</p>
