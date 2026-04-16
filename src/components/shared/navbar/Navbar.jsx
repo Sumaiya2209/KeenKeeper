@@ -1,29 +1,41 @@
 import { FaHome, FaClock, FaChartLine } from "react-icons/fa";
+import { NavLink } from "react-router";
+
+
+const Navbar = () => {
+
+   const linkClass = ({ isActive }) =>
+    `flex items-center gap-2 px-3 py-2 rounded ${
+      isActive
+        ? "bg-[#244D3F] text-white"
+        : "text-gray-600 hover:bg-[#244D3F] hover:text-white"
+    }`;
 
 const menuItems = (
   <>
     <li>
-      <button className="flex items-center gap-2 text-gray-600 hover:bg-[#244D3F] hover:text-white">
+      <NavLink to="/" end className={linkClass}>
         <FaHome />
         Home
-      </button>
+      </NavLink>
     </li>
+
     <li>
-      <a className="flex items-center gap-2 text-gray-600 hover:bg-[#244D3F] hover:text-white">
+      <NavLink to="/timeline" className={linkClass}>
         <FaClock />
         Timeline
-      </a>
+      </NavLink>
     </li>
+
     <li>
-      <a className="flex items-center gap-2 text-gray-600 hover:bg-[#244D3F] hover:text-white">
+      <NavLink to="/stats" className={linkClass}>
         <FaChartLine />
         Stats
-      </a>
+      </NavLink>
     </li>
   </>
 );
 
-const Navbar = () => {
   return (
     <div className="bg-base-200 shadow-sm">
       <div className="navbar md:mx-auto md:max-w-7xl">
