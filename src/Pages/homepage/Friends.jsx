@@ -4,7 +4,6 @@ import { Link } from 'react-router';
 const Friends = ({ data }) => {
 
   const friends = use(data);
-  console.log(friends);
 
   return (
     <div className='max-w-7xl my-10 mx-auto border-t-2 border-gray-100 py-10 px-4'>

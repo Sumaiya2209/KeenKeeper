@@ -5,32 +5,22 @@ import Video from '../../assets/video.png';
 import { RiDeleteBinLine } from 'react-icons/ri';
 import { HiOutlineBellSnooze } from 'react-icons/hi2';
 import { LuArchive } from 'react-icons/lu';
-import { useState } from 'react';
+import { useContext } from 'react';
+import {FriendContext }from '../../context/FriendsContext';
+
 
 const FriendsDetails = () => {
   const { friendId } = useParams();
 
   const friends = useLoaderData();
   const friend = friends.find(f => f.id === Number(friendId));
-  
-  const [call, setCall] = useState([]);
-  const [text, setText] = useState([]);
-  const [video, setVideo] = useState([]);
 
-  const handleCallList = (friend) => {
-    setCall([...call, friend]);
-  };
-console.log(call);
+  const friendContext = useContext(FriendContext);
+  const { handleCallList, handleTextList, handleVideoList } = friendContext;
 
-const handleTextList = (friend) => {
-  setText([...text, friend]);
-};
-console.log(text);
-
-const handleVideoList = (friend) => {
-  setVideo([...video, friend]);
-};
-console.log(video);
+  if (!friend) {
+    return <p className="text-center mt-10">Friend not found</p>;
+  }
 
   return (
     <div className="min-h-screen bg-base flex items-center justify-center " >
