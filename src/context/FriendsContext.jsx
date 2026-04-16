@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react';
+import { toast } from 'react-toastify';
 
 
 
@@ -11,11 +12,13 @@ const FriendsContext = ({ children }) => {
   const [video, setVideo] = useState([]);
 
   const handleCallList = (friend) => {
+    toast.success(`${friend.name} added to call list!`);
     const newEntry = { ...friend, type: 'call', timestamp: new Date().toISOString() };
     setCall([...call, newEntry]);
   };
 
   const handleTextList = (friend) => {
+    toast.success(`${friend.name} added to text list!`);
     const newEntry = { ...friend, type: 'text', timestamp: new Date().toISOString() };
     setText([...text, newEntry]);
   };
@@ -23,6 +26,7 @@ const FriendsContext = ({ children }) => {
   const handleVideoList = (friend) => {
     const newEntry = { ...friend, type: 'video', timestamp: new Date().toISOString() };
     setVideo([...video, newEntry]);
+      toast.success(`${friend.name} added to video list!`);
   };
 
   const contextValue = {
