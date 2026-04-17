@@ -6,7 +6,7 @@ const TimelineCard = ({ allActivities, formatDate }) => {
   return (
     <>
           {allActivities.map((item, index) => (
-            <div key={index} className="card bg-base-100 text-gray-600 p-4 shadow ">
+            <div key={index} className="card bg-base-100 text-gray-600 p-4 shadow">
               <div className='flex items-center gap-4'>
                 <div>
                   {item.type === "call" && <img src={Call} alt="Call" className="w-6 h-6" />}
