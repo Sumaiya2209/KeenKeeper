@@ -50,21 +50,38 @@ const Timeline = () => {
 
       <div className='flex flex-col md:flex-row items-start md:items-center gap-4 justify-between'>
         <div className="dropdown dropdown-bottom">
-        <div tabIndex={0} role="button" className="btn m-1 text-gray-500 font-normal">Filter timeline {filter} <span className='pl-7'> <MdKeyboardArrowDown /></span></div>
-        <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-          <li onClick={() => { setFilter("all"); document.activeElement.blur(); }}><a>All</a></li>
-          <li onClick={() => { setFilter("calls"); document.activeElement.blur(); }}><a>Calls</a></li>
-          <li onClick={() => { setFilter("texts"); document.activeElement.blur(); }}><a>Texts</a></li>
-          <li onClick={() => { setFilter("videos"); document.activeElement.blur(); }}><a>Videos</a></li>
-        </ul>
-      </div>
-      <input
-        type="text"
-        placeholder="Search by name or type..."
-        className="input input-bordered w-full max-w-xs mb-4"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
+          <div tabIndex={0} role="button" className="btn m-1 text-gray-500 font-normal">Filter timeline {filter} <span className='pl-7'> <MdKeyboardArrowDown /></span></div>
+          <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+            <li onClick={() => {
+              setFilter("all"); document.activeElement.blur();
+            }}>
+              <a>All</a>
+            </li>
+            <li onClick={() => {
+              setFilter("calls"); document.activeElement.blur();
+            }}>
+              <a>Calls</a>
+            </li>
+            <li onClick={() => {
+              setFilter("texts"); document.activeElement.blur();
+            }}>
+              <a>Texts</a>
+            </li>
+            <li onClick={() => {
+              setFilter("videos");
+              document.activeElement.blur();
+            }}>
+              <a>Videos</a>
+            </li>
+          </ul>
+        </div>
+        <input
+          type="text"
+          placeholder="Search by name or type..."
+          className="input input-bordered w-full max-w-xs mb-4"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
       </div>
 
 
