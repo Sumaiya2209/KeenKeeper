@@ -1,16 +1,36 @@
-# React + Vite
+# KeenKeeper — Keep Your Friendships Alive
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+KeenKeeper is a friendship management web app, which is responsive, that helps users to build relationships with their friends. It allows users to log interactions (calls, texts, video chats) and analyze communication patterns through visual analytics.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React.js
+- React Router DOM
+- Tailwind CSS
+- Recharts
+- React Toastify (for notifications)
+- Context API (state management)
+- JSON data handling
 
-## React Compiler
+ ##  Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1.  Friend Management
+- View and manage friends from a JSON dataset  
+- Displays profile, status, tags, and contact info  
+- Fully responsive layout  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2.  Interaction Tracking
+- Log Call, Text, or Video interactions  
+- Automatically adds entries to the timeline  
+- Shows date, type, and friend name with toast notifications  
+
+---
+
+### 3.  Analytics & Timeline
+- Pie chart visualization of interaction types  
+- Timeline with filtering (Call/Text/Video)  
+- Helps track and understand communication patterns  
+
+---
