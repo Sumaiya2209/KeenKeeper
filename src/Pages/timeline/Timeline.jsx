@@ -46,7 +46,7 @@ const Timeline = () => {
 
   return (
     <div className='max-w-5xl mx-auto my-20 space-y-3'>
-      <h2 className='text-4xl font-bold my-10 md:m-4'>Timeline</h2>
+      <h2 className='text-4xl font-bold my-10 m-4 lg:m-0'>Timeline</h2>
 
       <div className='flex flex-col md:flex-row items-start md:items-center gap-4 justify-between m-4'>
         <div className="dropdown dropdown-bottom">
@@ -86,7 +86,7 @@ const Timeline = () => {
 
 
       {allActivities.length === 0 ? (
-        < div className='bg-base-100 shadow p-10 rounded text-center md:m-4 m-0'>
+        < div className='bg-base-100 shadow p-10 rounded text-center m-4 lg:m-0'>
           <p className='text-center text-gray-500'>No activities yet. Start connecting with your friends!</p>
         </div>
       ) : (
